@@ -21,18 +21,9 @@ Backend (Node.js + Express)
 Database (MongoDB Atlas / Local)
 ```
 
-- **Frontend**:  
-  - Built with **React (Vite)** for fast dev experience.  
-  - Styled with **TailwindCSS** + custom glitch/CRT effects.  
-  - Handles authentication, dashboard, bug management, filters & search.  
-
-- **Backend**:  
-  - **Express.js API** with JWT-based authentication.  
-  - Provides endpoints for user registration, login, and bug CRUD.  
-  - Middleware ensures role-based access (Admin vs Reporter).  
-
-- **Database**:  
-  - **MongoDB Atlas / Local MongoDB** for persistent bug and user data.  
+- **Frontend**: React (Vite), TailwindCSS, React Router, Axios  
+- **Backend**: Node.js, Express.js, JWT, Bcrypt, Mongoose  
+- **Database**: MongoDB (Atlas or Local)  
 
 ---
 
@@ -82,7 +73,7 @@ bug-tracker/
 
 ---
 
-## ⚡ Local Setup
+## ⚡ Setup Instructions
 
 ### 1️⃣ Clone the repo
 ```bash
@@ -111,6 +102,55 @@ Frontend runs on **http://localhost:5173**
 
 ---
 
+## 🗄️ Database Schema Diagram
+
+### **User**
+```
+User {
+  _id: ObjectId,
+  name: String,
+  email: String (unique),
+  password: String (hashed),
+  role: String ("admin" | "reporter")
+}
+```
+
+### **Bug**
+```
+Bug {
+  _id: ObjectId,
+  title: String,
+  description: String,
+  severity: String ("Low" | "Medium" | "High"),
+  status: String ("Open" | "In Progress" | "Closed"),
+  reporter: ObjectId (ref User),
+  createdAt: Date,
+  updatedAt: Date
+}
+```
+
+(Relationship: **One User → Many Bugs**)  
+
+---
+
+## 🌐 Deployment Link
+
+- Backend API (Render/Railway/Heroku): `https://your-backend-service.com/api`  
+- Frontend (Vercel/Netlify): `https://your-frontend-service.com`  
+
+*(Replace with actual deployed URLs)*  
+
+---
+
+## 📖 How to Use the Application
+
+1. **Register/Login** at the frontend deployment link.  
+2. **Dashboard** → Create, view, and filter bugs.  
+3. **Admin users** → Can update bug statuses.  
+4. **Logout** → End session securely.  
+
+---
+
 ## 👤 Admin User Creation
 
 1. Register a new user with role `"admin"` via API:  
@@ -123,8 +163,18 @@ POST http://localhost:5000/api/auth/register
   "role": "admin"
 }
 ```
+2. Or run a seed script (`seedAdmin.js`).  
 
-2. Or run a seed script (`seedAdmin.js`) to auto-create admin.  
+---
+
+## 🤖 Notes on AI Usage
+
+This project was developed with assistance from **AI (ChatGPT)** for:  
+- Generating boilerplate code (React components, Express routes).  
+- Styling with TailwindCSS (including glitch/retro effects).  
+- Writing documentation (README, setup instructions).  
+
+All AI-generated code was **reviewed, modified, and tested manually** to ensure correctness and project-specific customization.  
 
 ---
 
