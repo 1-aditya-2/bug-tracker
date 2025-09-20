@@ -1,7 +1,47 @@
 # 🐞 Bug Tracker (Retro Glitch Edition)
 
 A **full-stack bug tracking system** with a **retro-futuristic glitch UI**.  
-Report, track, and manage bugs with a modern backend and a CRT-inspired frontend aesthetic.  
+Report, track, and manage bugs with a modern backend and a CRT-inspired frontend aesthetic.
+
+---
+## 🌐 Deployment Link
+
+- Frontend Main (Render): `https://bug-tracker-1-22qf.onrender.com/`  
+- Backend API (Render): `https://bug-tracker-u9er.onrender.com`  
+
+---
+## 📊 Screenshots
+
+<img width="1913" height="953" alt="image" src="https://github.com/user-attachments/assets/d0fb42f3-5552-453f-b3de-bca60acf6d9a" />
+
+<img width="1897" height="952" alt="image" src="https://github.com/user-attachments/assets/0dda8b0c-513f-490d-b491-4799143fa2f2" />
+
+## ⚡ Setup Instructions
+
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/your-username/bug-tracker.git
+cd bug-tracker
+```
+
+### 2️⃣ Setup backend
+```bash
+cd backend
+npm install
+# set environment variables in .env
+MONGO_URI=mongodb://localhost:27017/bugtracker
+JWT_SECRET=supersecret
+npm run dev
+```
+Backend runs on **http://localhost:5000**  
+
+### 3️⃣ Setup frontend (glitch UI)
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Frontend runs on **http://localhost:5173**  
 
 ---
 
@@ -73,35 +113,6 @@ bug-tracker/
 
 ---
 
-## ⚡ Setup Instructions
-
-### 1️⃣ Clone the repo
-```bash
-git clone https://github.com/your-username/bug-tracker.git
-cd bug-tracker
-```
-
-### 2️⃣ Setup backend
-```bash
-cd backend
-npm install
-# set environment variables in .env
-MONGO_URI=mongodb://localhost:27017/bugtracker
-JWT_SECRET=supersecret
-npm run dev
-```
-Backend runs on **http://localhost:5000**  
-
-### 3️⃣ Setup frontend (glitch UI)
-```bash
-cd frontend
-npm install
-npm run dev
-```
-Frontend runs on **http://localhost:5173**  
-
----
-
 ## 🗄️ Database Schema Diagram
 
 ### **User**
@@ -130,15 +141,6 @@ Bug {
 ```
 
 (Relationship: **One User → Many Bugs**)  
-
----
-
-## 🌐 Deployment Link
-
-- Backend API (Render/Railway/Heroku): `https://your-backend-service.com/api`  
-- Frontend (Vercel/Netlify): `https://your-frontend-service.com`  
-
-*(Replace with actual deployed URLs)*  
 
 ---
 
@@ -171,8 +173,8 @@ POST http://localhost:5000/api/auth/register
 
 This project was developed with assistance from **AI (ChatGPT)** for:  
 - Generating boilerplate code (React components, Express routes).  
-- Styling with TailwindCSS (including glitch/retro effects).  
-- Writing documentation (README, setup instructions).  
+- Styling with TailwindCSS (including retro effects).  
+- Writing documentation (README file).  
 
 All AI-generated code was **reviewed, modified, and tested manually** to ensure correctness and project-specific customization.  
 
@@ -186,7 +188,3 @@ All AI-generated code was **reviewed, modified, and tested manually** to ensure 
 - Docker setup for one-command deployment  
 
 ---
-
-## 📜 License
-
-MIT License © 2025
