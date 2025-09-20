@@ -10,6 +10,11 @@ Report, track, and manage bugs with a modern backend and a CRT-inspired frontend
 - Backend API (Render): `https://bug-tracker-u9er.onrender.com`  
 
 ---
+## 📊 Screenshots
+
+<img width="1913" height="953" alt="image" src="https://github.com/user-attachments/assets/d0fb42f3-5552-453f-b3de-bca60acf6d9a" />
+
+<img width="1897" height="952" alt="image" src="https://github.com/user-attachments/assets/0dda8b0c-513f-490d-b491-4799143fa2f2" />
 
 ## ⚡ Setup Instructions
 
